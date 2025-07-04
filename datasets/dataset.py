@@ -85,7 +85,7 @@ class AllWeatherDataset(torch.utils.data.Dataset):
         
         input_raw, gt_img, gt_img_gray = np.expand_dims(np.asarray(imageio.imread(input_name)), axis=-1), \
             np.asarray(imageio.imread(gt_name)), \
-            np.expand_dims(np.asarray(imageio.imread(gt_name, as_gray=True)), axis=-1)
+            np.expand_dims(np.asarray(imageio.imread(gt_name, mode='F')), axis=-1)
         
 
         input_raw = np.maximum((input_raw - self.black_level), 0) / (self.white_level - self.black_level)
