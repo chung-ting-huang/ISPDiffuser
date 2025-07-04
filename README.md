@@ -13,3 +13,4 @@ requiment檔案
 patch_size 設定問題
 win_size 問題
 ssim_gt = structural_similarity(recon_img, y, win_size=7, data_range=255, multichannel=True, gaussian_weights=True)
+ISPDiffuser img_id 問題
