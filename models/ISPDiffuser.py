@@ -277,7 +277,7 @@ class ISPDiffuser(object):
                     recon_img = np.clip(recon_img * 255.0, 0, 255.0).astype('uint8')
                 
                     psnr_gt = peak_signal_noise_ratio(recon_img, y, data_range=255)
-                    ssim_gt = structural_similarity(recon_img, y, win_size=11, data_range=255, multichannel=True, gaussian_weights=True)
+                    ssim_gt = structural_similarity(recon_img, y, win_size=11, data_range=255, gaussian_weights=True, channel_axis=-1)
                     lpips_gt = calc_lpips(recon_img, y, loss_fn_alex_v1)
                     if i == 0:
                         pred_x_save = pred_x
