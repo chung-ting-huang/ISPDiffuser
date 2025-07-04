@@ -14,3 +14,13 @@ patch_size 設定問題
 win_size 問題
 ssim_gt = structural_similarity(recon_img, y, win_size=7, data_range=255, multichannel=True, gaussian_weights=True)
 ISPDiffuser img_id 問題
+
+config 缺乏scale
+Traceback (most recent call last):
+  File "D:\github_code\ISPDiffuser-main\train.py", line 74, in <module>
+    main()
+  File "D:\github_code\ISPDiffuser-main\train.py", line 70, in main
+    diffusion.train(DATASET)
+  File "D:\github_code\ISPDiffuser-main\models\ISPDiffuser.py", line 238, in train
+    filename=os.path.join(self.config.data.ckpt_dir, str(self.config.data.scale), 'model_latest'))
+AttributeError: 'Namespace' object has no attribute 'scale'
