@@ -11,3 +11,5 @@ This is the official employment of "ISPDiffuser: Learning RAW-to-sRGB Mappings w
 資料格式讀取 txt檔案
 requiment檔案
 patch_size 設定問題
+win_size 問題
+ssim_gt = structural_similarity(recon_img, y, win_size=7, data_range=255, multichannel=True, gaussian_weights=True)
