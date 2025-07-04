@@ -7,3 +7,6 @@ This is the official employment of "ISPDiffuser: Learning RAW-to-sRGB Mappings w
 3. Change the dataset dir in `configs/MAI_dataset.yml` and `configs/ZRR_dataset.yml`
 4. Run
    ```python evaluate.py --config path_to_ISPDiffuser/configs/MAI_dataset.yml```
+
+資料格式讀取 txt檔案
+requiment檔案
