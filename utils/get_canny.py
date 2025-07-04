@@ -1,8 +1,10 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from scipy.signal import gaussian
-
+try:
+    from scipy.signal.windows import gaussian
+except ImportError:
+    from scipy.signal import gaussian  # 舊版本支援
 
 class Net(nn.Module):
     def __init__(self, threshold=3.0, use_cuda=False):
