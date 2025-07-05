@@ -30,7 +30,7 @@ class color_extra(nn.Module):
 
         hist = self.relu(self.linear(self.block1(raw).permute(0, 3, 2, 1).squeeze(1)))
         if gt is not None:
-            gt_hist = self.relu(self.linear(self.block1(raw).permute(0, 3, 2, 1).squeeze(1)))
+            gt_hist = self.relu(self.linear(self.block1(gt).permute(0, 3, 2, 1).squeeze(1)))
         else:
             gt_hist =None
 
