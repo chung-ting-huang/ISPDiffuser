@@ -104,7 +104,7 @@ class Net(nn.Module):
 
     @staticmethod
     def load_stage1(model, model_dir):
-        checkpoint = utils.logging.load_checkpoint(os.path.join(model_dir, 'stage1_weight.pth.tar'), 'cuda')
+        checkpoint = utils.logging.load_checkpoint(os.path.join(model_dir, 'stage1_weight.pth'), 'cuda')
         model.load_state_dict(checkpoint['model'], strict=True)
         return model
 
